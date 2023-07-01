@@ -28,7 +28,7 @@ export async function load({ fetch }) {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
-			'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vaHVudGVyY294ZGV2LmxvY2FsIiwiaWF0IjoxNjg4MTk0OTg3LCJuYmYiOjE2ODgxOTQ5ODcsImV4cCI6MTY4ODE5NTI4NywiZGF0YSI6eyJ1c2VyIjp7ImlkIjoiMSJ9fX0.tPV9V6NnNwkLOfgu3IUbjhpyeRUnDL893JhVnMCeYhg'
+			// 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vaHVudGVyY294ZGV2LmxvY2FsIiwiaWF0IjoxNjg4MTk0OTg3LCJuYmYiOjE2ODgxOTQ5ODcsImV4cCI6MTY4ODE5NTI4NywiZGF0YSI6eyJ1c2VyIjp7ImlkIjoiMSJ9fX0.tPV9V6NnNwkLOfgu3IUbjhpyeRUnDL893JhVnMCeYhg'
 		},
 		body: JSON.stringify({
 			query: query
