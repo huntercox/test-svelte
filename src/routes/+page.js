@@ -1,3 +1,5 @@
+import '../global.scss';
+
 const query = `
 query headerInfo {
   generalSettings {
@@ -17,6 +19,7 @@ query headerInfo {
   }
 }
 `;
+
 export async function load({ fetch }) {
 	const response = await fetch('http://huntercoxdev.local/graphql', {
 		method: 'POST',
