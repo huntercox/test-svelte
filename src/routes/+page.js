@@ -15,11 +15,11 @@ query headerInfo {
       }
     }
   },
-	pageBy(pageId: 7) {
+  pageBy(pageId: 7) {
     flexLayouts {
       fieldGroupName
       flexLayouts {
-				... on ContentNode_Flexlayouts_FlexLayouts_BasicContent {
+        ... on ContentNode_Flexlayouts_FlexLayouts_BasicContent {
           fieldGroupName
           textContent
         }
@@ -48,6 +48,12 @@ query headerInfo {
           image {
             mediaItemId
             sourceUrl(size: FLEX_HERO_TALL)
+          }
+          settings {
+            imageSettings {
+              toggleParallax
+							height
+            }
           }
         }
         ... on ContentNode_Flexlayouts_FlexLayouts_SectionHeading {

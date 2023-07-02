@@ -1,9 +1,10 @@
 <script>
+	import Header from '../components/Header.svelte';
 	export let data;
 	const flexLayouts = data.data.pageBy.flexLayouts;
-	console.log(flexLayouts);
-
-	import Header from '../components/Header.svelte';
+	const imageUrl = flexLayouts?.flexLayouts[1]?.image?.sourceUrl;
+	const toggleParallax = flexLayouts?.flexLayouts[1]?.settings?.imageSettings?.toggleParallax;
+	const imageHeight = flexLayouts?.flexLayouts[1]?.settings?.imageSettings?.height;
 </script>
 
 <Header headerData={data} />
@@ -20,7 +21,13 @@
 		<div class="content__text-editor">
 			{@html flexLayouts?.flexLayouts[0]?.visualEditor}
 
-			<img src="{flexLayouts?.flexLayouts[1]?.image?.sourceUrl}" />
+			{#if toggleParallax}
+			<img src="{imageUrl}" class="parallax" height="{imageHeight}px" />
+			{:else}
+				<img src="{imageUrl}}" height="{imageHeight}px" />
+			{/if}
+
+
 
 			{@html flexLayouts?.flexLayouts[3]?.visualEditor}
 		</div>

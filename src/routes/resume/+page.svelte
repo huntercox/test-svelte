@@ -1,4 +1,5 @@
 <script>
+	// RESUME PAGE
 	export let data;
 
 	const flexLayouts = data.data.pageBy.flexLayouts;
