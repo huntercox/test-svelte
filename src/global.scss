@@ -20,6 +20,17 @@ body {
 	border-right: 1px solid $purple;
 }
 
+.color-label {
+	padding: 6px 10px 4px 10px;
+	margin-right: 5px;
+	line-height: 1.2;
+	font-size: 22px;
+	font-variation-settings: "MONO" 1, "CASL" 1, "wght" 800, "slnt" 0, "CRSV" 0.25;
+	font-size: 20px;
+	font-variation-settings: "MONO" 1, "CASL" 0, "wght" 400, "slnt" 0, "CRSV" 0.25;
+	border-radius: 4px;
+}
+
 header {
 	background-color: $green;
 

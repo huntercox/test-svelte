@@ -36,6 +36,29 @@ ul {
 		margin: 0;
 	}
 }
+.content__text-editor,
+.content__visual-editor {
+	ul {
+		margin-left: 20px;
+		list-style-type: disc;
+		li {
+			margin-bottom: 10px;
+		}
+
+		&.label-list {
+			list-style-type: none;
+			display: flex;
+			flex-wrap: wrap;
+
+			li {
+				@extend .color-label;
+				margin-right: 10px;
+				color: var($dark);
+			}
+		}
+	}
+}
+
 // Headings
 h1,
 h2,

@@ -21,17 +21,9 @@ query headerInfo {
     flexLayouts {
       fieldGroupName
       flexLayouts {
-        ... on ContentNode_Flexlayouts_FlexLayouts_BasicContent {
+				... on ContentNode_Flexlayouts_FlexLayouts_BasicContent {
           fieldGroupName
           textContent
-          settings {
-            colorSettings {
-              backgroundColor
-              fieldGroupName
-              textColor
-            }
-            fieldGroupName
-          }
         }
         ... on ContentNode_Flexlayouts_FlexLayouts_AdvancedContent {
           fieldGroupName
@@ -51,6 +43,20 @@ query headerInfo {
               column1Content
               column2Content
             }
+          }
+        }
+        ... on ContentNode_Flexlayouts_FlexLayouts_Hero {
+          fieldGroupName
+          image {
+            mediaItemId
+            sourceUrl(size: FLEX_HERO_TALL)
+          }
+        }
+        ... on ContentNode_Flexlayouts_FlexLayouts_SectionHeading {
+          fieldGroupName
+          heading {
+            headingTag
+            text
           }
         }
       }
