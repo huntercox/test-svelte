@@ -16,6 +16,45 @@ query headerInfo {
         }
       }
     }
+  },
+	pageBy(pageId: 7) {
+    flexLayouts {
+      fieldGroupName
+      flexLayouts {
+        ... on ContentNode_Flexlayouts_FlexLayouts_BasicContent {
+          fieldGroupName
+          textContent
+          settings {
+            colorSettings {
+              backgroundColor
+              fieldGroupName
+              textColor
+            }
+            fieldGroupName
+          }
+        }
+        ... on ContentNode_Flexlayouts_FlexLayouts_AdvancedContent {
+          fieldGroupName
+          visualEditor
+          settings {
+            fieldGroupName
+          }
+        }
+        ... on ContentNode_Flexlayouts_FlexLayouts_Columns {
+          fieldGroupName
+          columnLayouts {
+            ... on ContentNode_Flexlayouts_FlexLayouts_Columns_ColumnLayouts_2Columns {
+              column1Content
+              column2Content
+            }
+            ... on ContentNode_Flexlayouts_FlexLayouts_Columns_ColumnLayouts_3Columns {
+              column1Content
+              column2Content
+            }
+          }
+        }
+      }
+    }
   }
 }
 `;
