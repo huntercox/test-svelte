@@ -1,4 +1,5 @@
 <script>
+import '../global.scss';
 export let headerData;
 
 const settings = headerData.data.generalSettings;
@@ -7,7 +8,7 @@ const navMenus = headerData.data.menus.nodes[0].menuItems.nodes;
 
 <header>
 	<div class="container">
-		<a href={settings?.url}><h1>{settings?.title}</h1></a>
+		<a href="/"><h1>{settings?.title}</h1></a>
 		<nav>
 			<ul>
 				{#each navMenus as { uri, url, label }, i}

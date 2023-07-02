@@ -1,26 +1,12 @@
 <script>
 	export let data;
 
-	const settings = data.data.generalSettings;
-	const navMenus = data.data.menus.nodes[0].menuItems.nodes;
 	const flexLayouts = data.data.pageBy.flexLayouts;
-	console.log(flexLayouts);
+
+	import Header from '../../components/Header.svelte';
 </script>
 
-<header>
-	<div class="container">
-		<a href={settings?.url}><h1>{settings?.title}</h1></a>
-		<nav>
-			<ul>
-				{#each navMenus as { uri, url, label }, i}
-					<li>
-						<a href={uri}>{label}</a>
-					</li>
-				{/each}
-			</ul>
-		</nav>
-	</div>
-</header>
+<Header headerData={data} />
 
 <main>
 	<div class="container">
