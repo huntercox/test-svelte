@@ -14,33 +14,9 @@ query skillsPage {
       }
     }
   },
-	pageBy(pageId: 57) {
+	pageBy(pageId: 302) {
     title
 		content
-  },
-	employers {
-    nodes {
-      title
-      employmentDetails {
-        jobTitle
-        location
-        status {
-          currentEmployer
-          startDate {
-            month
-            year
-          }
-          lengthOfEmployment {
-            months
-            years
-          }
-          endDate {
-            month
-            year
-          }
-        }
-      }
-    }
   }
 }
 `;

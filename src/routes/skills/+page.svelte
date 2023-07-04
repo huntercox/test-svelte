@@ -1,13 +1,10 @@
 <script>
-	// RESUME PAGE
+	// SKILLS PAGE
 	export let data;
 	import Header from '../../components/Header.svelte';
 
 	const pageTitle = data.data.pageBy.title;
 	const pageContent = data.data.pageBy.content;
-
-	// Employers
-	const employers = data.data.employers.nodes;
 </script>
 
 <Header headerData={data} />
@@ -15,15 +12,9 @@
 <main>
 	<div class="container">
 		<h2>{pageTitle}</h2>
-
 		<div class="content__text-editor">
 			{@html pageContent}
 		</div>
-
-		{#each employers as { title }, i}
-			<strong>{title}</strong>
-		{/each}
-		<pre>{employers[0].title}</pre>
 	</div>
 </main>
 
