@@ -20,10 +20,35 @@
 			{@html pageContent}
 		</div>
 
-		{#each employers as { title }, i}
-			<strong>{title}</strong>
-		{/each}
-		<pre>{employers[0].title}</pre>
+		{#if employers.length > 0}
+			<h3>Employers</h3>
+
+			<div class="employers">
+				{#each employers as { title, employmentDetails }, i}
+					{@const startMonth = employmentDetails.status.startDate.month}
+					{@const startYear = employmentDetails.status.startDate.year}
+					{@const endMonth = employmentDetails.status.endDate.month}
+					{@const endYear = employmentDetails.status.endDate.year}
+					<div
+						class={employmentDetails.status.currentEmployer
+							? 'employer employer--current'
+							: 'employer'}
+					>
+						{#if employmentDetails.status.currentEmployer === true}
+							<span class="current-employer">Current Employer</span>
+						{/if}
+
+						<h4>{title}</h4>
+						<p>{employmentDetails.jobTitle}</p>
+						<p><em>Location:</em> {employmentDetails.location}</p>
+						<p><em>Start Date:</em> {startMonth} {startYear}</p>
+						{#if employmentDetails.status.currentEmployer !== true}
+							<p><em>End Date:</em> {endMonth} {endYear}</p>
+						{/if}
+					</div>
+				{/each}
+			</div>
+		{/if}
 	</div>
 </main>
 
